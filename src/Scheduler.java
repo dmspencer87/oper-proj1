@@ -64,12 +64,12 @@ public class Scheduler  {
         System.out.printf("%-5s %-12s %-12s %-12s %-12s \n", "pid", "BurstTime", "WaitingTime", "TurnAround", "Priority");
         int index = 0;
         this.waiting = 0;
-        this.completionTime = 0;
+        this.completionTime = 50;
         int avgComp = 0;
         while(!rrArray.isEmpty()){
             process p = rrArray.get(index);
             //int burst = p.getBurst();
-            this.completionTime += time_quant;
+            //this.completionTime += time_quant;
             System.out.printf("%-5s %-12s %-12s %-12s %-12s \n", p.getPid(), p.getBurst(), this.waiting, this.completionTime, p.getPriority());
             p.timeReturn(time_quant);
             int t = p.getBurst();
@@ -82,7 +82,7 @@ public class Scheduler  {
                 //System.out.println(avgComp);
             }
             else{
-                //completionTime += time_quant;
+                completionTime += time_quant;
                 rrArray.set(index,p);
             }
 
