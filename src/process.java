@@ -5,18 +5,21 @@ public class process {
     private int pid;
     private int burset_time;
     private int priority;
+    private int turnAround = 0;
 
     process(int p, int b, int pr){
         pid =p;
         burset_time=b;
         priority=pr;
     }
-    void display(){
-        System.out.println(this.pid);
-        System.out.println(this.burset_time);
-        System.out.println(this.priority);
+    public void timeReturn(int timeQuanta){
+        burset_time -= timeQuanta;
     }
-    int getPid(){return this.pid;}
-    int getBurst(){return  this.burset_time;}
-    int getPriority(){return this.priority;}
+    public int getPid(){return this.pid;}
+    public int getBurst(){return  this.burset_time;}
+    public int getPriority(){return this.priority;}
+
+//    void setTurnAround(int t){
+//        turnAround += (t + 3);
+//    }
 }

@@ -9,6 +9,7 @@ public class driver{
         Scheduler part1 = new Scheduler("input.txt");
         part1.FCFS();
         part1.SFJ();
+        part1.RR(50);
     }
 
 }
