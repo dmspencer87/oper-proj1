@@ -5,7 +5,7 @@ public class process {
     private int pid;
     private int burset_time;
     private int priority;
-    private int turnAround = 0;
+
 
     process(int p, int b, int pr){
         pid =p;
@@ -19,7 +19,5 @@ public class process {
     public int getBurst(){return  this.burset_time;}
     public int getPriority(){return this.priority;}
 
-//    void setTurnAround(int t){
-//        turnAround += (t + 3);
-//    }
+
 }

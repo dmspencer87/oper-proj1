@@ -5,10 +5,10 @@ import java.util.Comparator;
  */
 public class comparator implements Comparator<process> {
     public int compare(process x, process y){
-        if (x.getPriority()>y.getPriority()){
+        if (x.getBurst()<y.getBurst()){
             return -1;
         }
-        else if(x.getPriority()<y.getPriority()){
+        else if(x.getBurst()>y.getBurst()){
             return 1;
         }
         else{
